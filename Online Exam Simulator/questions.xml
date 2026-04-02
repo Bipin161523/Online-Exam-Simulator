@@ -1,0 +1,33 @@
+<questions>
+
+  <!-- BASIC WEB -->
+  <question><text>What is HTML?</text><option>Programming</option><option>Markup</option><option>OS</option><option>DB</option><answer>B</answer></question>
+  <question><text>CSS stands for?</text><option>Color Sheet</option><option>Cascading Style Sheet</option><option>Code Sheet</option><option>None</option><answer>B</answer></question>
+  <question><text>JavaScript is?</text><option>Language</option><option>DB</option><option>OS</option><option>None</option><answer>A</answer></question>
+  <question><text>HTML tag for paragraph?</text><option>&lt;p&gt;</option><option>&lt;h1&gt;</option><option>&lt;div&gt;</option><option>&lt;span&gt;</option><answer>A</answer></question>
+  <question><text>CSS property for color?</text><option>font</option><option>color</option><option>bg</option><option>style</option><answer>B</answer></question>
+
+  <!-- JS -->
+  <question><text>JS used for?</text><option>Styling</option><option>Logic</option><option>DB</option><option>None</option><answer>B</answer></question>
+  <question><text>let keyword is?</text><option>Variable</option><option>Loop</option><option>Function</option><option>Class</option><answer>A</answer></question>
+  <question><text>Which is array?</text><option>{}</option><option>[]</option><option>()</option><option>&lt;&gt;</option><answer>B</answer></question>
+  <question><text>JS output?</text><option>alert()</option><option>print()</option><option>echo()</option><option>cout</option><answer>A</answer></question>
+  <question><text>DOM stands for?</text><option>Doc Object Model</option><option>Data Obj Model</option><option>Doc Mode</option><option>None</option><answer>A</answer></question>
+
+  <!-- HTML -->
+  <question><text>Heading tag?</text><option>&lt;h1&gt;</option><option>&lt;p&gt;</option><option>&lt;a&gt;</option><option>&lt;img&gt;</option><answer>A</answer></question>
+  <question><text>Link tag?</text><option>&lt;a&gt;</option><option>&lt;link&gt;</option><option>&lt;href&gt;</option><option>&lt;url&gt;</option><answer>A</answer></question>
+  <question><text>Image tag?</text><option>&lt;img&gt;</option><option>&lt;pic&gt;</option><option>&lt;image&gt;</option><option>&lt;src&gt;</option><answer>A</answer></question>
+  <question><text>HTML stands for?</text><option>Hyper Text Markup Language</option><option>High Tool</option><option>Home Tool</option><option>None</option><answer>A</answer></question>
+
+  <!-- CSS -->
+  <question><text>CSS used for?</text><option>Logic</option><option>Design</option><option>DB</option><option>None</option><answer>B</answer></question>
+  <question><text>Selector type?</text><option>Class</option><option>ID</option><option>Both</option><option>None</option><answer>C</answer></question>
+  <question><text>Inline CSS?</text><option>Inside tag</option><option>External</option><option>Internal</option><option>None</option><answer>A</answer></question>
+
+  <!-- GENERAL -->
+  <question><text>CPU full form?</text><option>Central Processing Unit</option><option>Computer Unit</option><option>Control Unit</option><option>None</option><answer>A</answer></question>
+  <question><text>RAM is?</text><option>Memory</option><option>Disk</option><option>CPU</option><option>None</option><answer>A</answer></question>
+  <question><text>Internet is?</text><option>Network</option><option>OS</option><option>DB</option><option>None</option><answer>A</answer></question>
+
+  <!-- MORE (Pattern continues) -->

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Online Exam Simulator</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body{background:#f4f4f4;}
+.section{display:none;}
+</style>
+</head>
+
+<body>
+
+<div class="container mt-5">
+
+<!-- LOGIN -->
+<div id="login" class="section">
+<div class="card p-4 shadow">
+<h3>Login</h3>
+<input id="luser" class="form-control mb-2" placeholder="Username">
+<input id="lpass" type="password" class="form-control mb-2" placeholder="Password">
+<button class="btn btn-primary" onclick="login()">Login</button>
+<p class="mt-2">No account? <a href="#" onclick="show('register')">Register</a></p>
+</div>
+</div>
+
+<!-- REGISTER -->
+<div id="register" class="section">
+<div class="card p-4 shadow">
+<h3>Register</h3>
+<input id="ruser" class="form-control mb-2">
+<input id="rpass" type="password" class="form-control mb-2">
+<button class="btn btn-success" onclick="register()">Register</button>
+</div>
+</div>
+
+<!-- DASHBOARD -->
+<div id="dashboard" class="section text-center">
+<div class="card p-4 shadow">
+<h3>Welcome <span id="name"></span></h3>
+<button class="btn btn-primary m-2" onclick="startExam()">Start Exam</button>
+<button class="btn btn-success m-2" onclick="showHistory()">History</button>
+<button class="btn btn-danger m-2" onclick="logout()">Logout</button>
+</div>
+</div>
+
+<!-- EXAM -->
+<div id="exam" class="section">
+<div class="card p-4 shadow">
+
+<div class="d-flex justify-content-between">
+<h5>Exam</h5>
+<h5>⏱ <span id="time">60</span></h5>
+</div>
+
+<div class="progress mb-3">
+<div id="bar" class="progress-bar" style="width:0%"></div>
+</div>
+
+<div id="quiz"></div>
+
+<button onclick="prev()" class="btn btn-secondary">Prev</button>
+<button onclick="next()" class="btn btn-primary">Next</button>
+<button onclick="submitExam()" class="btn btn-success">Submit</button>
+
+</div>
+</div>
+
+<!-- RESULT -->
+<div id="result" class="section text-center">
+<div class="card p-4 shadow">
+<h2 id="score"></h2>
+<button class="btn btn-primary" onclick="showCertificate()">Certificate</button>
+</div>
+</div>
+
+<!-- HISTORY -->
+<div id="history" class="section">
+<div class="card p-4 shadow">
+<h3>History</h3>
+<div id="historyData"></div>
+<button onclick="show('dashboard')" class="btn btn-secondary mt-2">Back</button>
+</div>
+</div>
+
+<!-- CERTIFICATE -->
+<div id="certificate" class="section text-center">
+<div class="card p-4 shadow">
+<h1>Certificate</h1>
+<h2 id="cname"></h2>
+<h3 id="cscore"></h3>
+<button onclick="show('dashboard')" class="btn btn-secondary">Back</button>
+</div>
+</div>
+
+</div>
+
+<script>
+
+// NAVIGATION
+function show(id){
+  document.querySelectorAll(".section").forEach(s=>s.style.display="none");
+  document.getElementById(id).style.display="block";
+}
+
+// REGISTER
+function register(){
+  localStorage.setItem("user", ruser.value);
+  localStorage.setItem("pass", rpass.value);
+  alert("Registered!");
+  show("login");
+}
+
+// LOGIN
+function login(){
+  if(luser.value===localStorage.getItem("user") &&
+     lpass.value===localStorage.getItem("pass")){
+    localStorage.setItem("currentUser", luser.value);
+    name.innerText=luser.value;
+    show("dashboard");
+  } else alert("Invalid");
+}
+
+// LOGOUT
+function logout(){
+  localStorage.removeItem("currentUser");
+  show("login");
+}
+
+// QUESTIONS (NO XML → direct array)
+let questions=[
+{q:"HTML stands for?",o:["Hyper Text Markup Language","High Tool","Home Tool","None"],a:"A"},
+{q:"CSS is used for?",o:["Logic","Styling","Database","OS"],a:"B"},
+{q:"JS is?",o:["Language","DB","OS","None"],a:"A"}
+];
+
+let current=0,answers={},score=0;
+
+// START EXAM
+function startExam(){
+  current=0; score=0; answers={};
+  show("exam");
+  showQ();
+  startTimer();
+}
+
+// SHOW Q
+function showQ(){
+  let q=questions[current];
+  quiz.innerHTML=`<h5>${q.q}</h5>`+
+  q.o.map((o,i)=>`
+  <div>
+  <input type="radio" name="opt" value="${String.fromCharCode(65+i)}"
+  ${answers[current]==String.fromCharCode(65+i)?"checked":""}> ${o}
+  </div>`).join("");
+
+  bar.style.width=((current+1)/questions.length*100)+"%";
+}
+
+function next(){save(); if(current<questions.length-1){current++; showQ();}}
+function prev(){if(current>0){current--; showQ();}}
+
+function save(){
+  let sel=document.querySelector('input[name="opt"]:checked');
+  if(sel) answers[current]=sel.value;
+}
+
+// TIMER
+function startTimer(){
+let t=60;
+let timer=setInterval(()=>{
+  time.innerText=t;
+  if(t<=0){clearInterval(timer); submitExam();}
+  t--;
+},1000);
+}
+
+// SUBMIT
+function submitExam(){
+  save();
+  questions.forEach((q,i)=>{
+    if(answers[i]==q.a) score++;
+  });
+
+  let h=JSON.parse(localStorage.getItem("history")||"[]");
+  h.push({user:localStorage.getItem("currentUser"),score:score,date:new Date()});
+  localStorage.setItem("history",JSON.stringify(h));
+
+  localStorage.setItem("lastScore",score);
+
+  scoreDisplay();
+}
+
+// RESULT
+function scoreDisplay(){
+  scoreEl=document.getElementById("score");
+  scoreEl.innerText="Score: "+score;
+  show("result");
+}
+
+// HISTORY
+function showHistory(){
+  let h=JSON.parse(localStorage.getItem("history")||"[]");
+  let u=localStorage.getItem("currentUser");
+
+  historyData.innerHTML=h.filter(x=>x.user==u)
+  .map(x=>`Score:${x.score} | ${x.date}`).join("<br>");
+
+  show("history");
+}
+
+// CERTIFICATE
+function showCertificate(){
+  cname.innerText=localStorage.getItem("currentUser");
+  cscore.innerText="Score: "+localStorage.getItem("lastScore");
+  show("certificate");
+}
+
+// START
+show("login");
+
+</script>
+
+</body>
+</html>
