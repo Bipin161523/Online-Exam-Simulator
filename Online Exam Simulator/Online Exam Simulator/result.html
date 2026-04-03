@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+</head>
+<body>
+
+<h2 id="result"></h2>
+<button onclick="generateCertificate()">Download Certificate</button>
+
+<script>
+let user = localStorage.getItem("username");
+let score = localStorage.getItem("score");
+
+document.getElementById("result").innerText =
+user + ", Your Score: " + score;
+
+function generateCertificate() {
+    let text = `
+    Certificate of Completion
+    
+    This certifies that ${user}
+    scored ${score} marks.
+    `;
+
+    let blob = new Blob([text], { type: "text/plain" });
+    let link = document.createElement("a");
+
+    link.href = URL.createObjectURL(blob);
+    link.download = "certificate.txt";
+    link.click();
+}
+</script>
+
+</body>
+</html>

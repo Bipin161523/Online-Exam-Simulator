@@ -1,0 +1,458 @@
+<quiz>
+
+<!-- ================= DBMS ================= -->
+<question subject="DBMS">
+<text>What is DBMS?</text>
+<option1>Software</option1>
+<option2>Hardware</option2>
+<option3>Language</option3>
+<option4>Protocol</option4>
+<answer>Software</answer>
+</question>
+
+<question subject="DBMS">
+<text>Which language is used in DBMS?</text>
+<option1>HTML</option1>
+<option2>SQL</option2>
+<option3>CSS</option3>
+<option4>JS</option4>
+<answer>SQL</answer>
+</question>
+
+<question subject="DBMS">
+<text>Primary key is?</text>
+<option1>Unique</option1>
+<option2>Duplicate</option2>
+<option3>Optional</option3>
+<option4>Null</option4>
+<answer>Unique</answer>
+</question>
+
+<question subject="DBMS">
+<text>Which normal form removes redundancy?</text>
+<option1>1NF</option1>
+<option2>2NF</option2>
+<option3>3NF</option3>
+<option4>BCNF</option4>
+<answer>3NF</answer>
+</question>
+
+<question subject="DBMS">
+<text>What is a tuple?</text>
+<option1>Column</option1>
+<option2>Row</option2>
+<option3>Table</option3>
+<option4>Database</option4>
+<answer>Row</answer>
+</question>
+
+<question subject="DBMS">
+<text>Foreign key is used for?</text>
+<option1>Sorting</option1>
+<option2>Linking tables</option2>
+<option3>Deleting</option3>
+<option4>Indexing</option4>
+<answer>Linking tables</answer>
+</question>
+
+<question subject="DBMS">
+<text>Which DBMS is relational?</text>
+<option1>MySQL</option1>
+<option2>MongoDB</option2>
+<option3>Redis</option3>
+<option4>Firebase</option4>
+<answer>MySQL</answer>
+</question>
+
+<question subject="DBMS">
+<text>SQL stands for?</text>
+<option1>Structured Query Language</option1>
+<option2>Simple Query Language</option2>
+<option3>System Query</option3>
+<option4>None</option4>
+<answer>Structured Query Language</answer>
+</question>
+
+<question subject="DBMS">
+<text>Which command is used to retrieve data?</text>
+<option1>INSERT</option1>
+<option2>DELETE</option2>
+<option3>SELECT</option3>
+<option4>UPDATE</option4>
+<answer>SELECT</answer>
+</question>
+
+<question subject="DBMS">
+<text>Index is used to?</text>
+<option1>Speed up search</option1>
+<option2>Delete data</option2>
+<option3>Store data</option3>
+<option4>Print data</option4>
+<answer>Speed up search</answer>
+</question>
+
+<!-- ================= OS ================= -->
+<question subject="Operating System">
+<text>What is OS?</text>
+<option1>Hardware</option1>
+<option2>Software</option2>
+<option3>Device</option3>
+<option4>Memory</option4>
+<answer>Software</answer>
+</question>
+
+<question subject="Operating System">
+<text>Which is not OS?</text>
+<option1>Windows</option1>
+<option2>Linux</option2>
+<option3>Oracle</option3>
+<option4>MacOS</option4>
+<answer>Oracle</answer>
+</question>
+
+<question subject="Operating System">
+<text>Process means?</text>
+<option1>Program in execution</option1>
+<option2>File</option2>
+<option3>Folder</option3>
+<option4>Data</option4>
+<answer>Program in execution</answer>
+</question>
+
+<question subject="Operating System">
+<text>Which scheduling is first come?</text>
+<option1>FCFS</option1>
+<option2>SJF</option2>
+<option3>RR</option3>
+<option4>Priority</option4>
+<answer>FCFS</answer>
+</question>
+
+<question subject="Operating System">
+<text>Deadlock means?</text>
+<option1>Crash</option1>
+<option2>Infinite wait</option2>
+<option3>Error</option3>
+<option4>Restart</option4>
+<answer>Infinite wait</answer>
+</question>
+
+<question subject="Operating System">
+<text>Which memory is fastest?</text>
+<option1>RAM</option1>
+<option2>Cache</option2>
+<option3>Disk</option3>
+<option4>ROM</option4>
+<answer>Cache</answer>
+</question>
+
+<question subject="Operating System">
+<text>Virtual memory uses?</text>
+<option1>RAM</option1>
+<option2>Disk</option2>
+<option3>CPU</option3>
+<option4>Cache</option4>
+<answer>Disk</answer>
+</question>
+
+<question subject="Operating System">
+<text>Which is multitasking OS?</text>
+<option1>DOS</option1>
+<option2>Windows</option2>
+<option3>None</option3>
+<option4>Basic</option4>
+<answer>Windows</answer>
+</question>
+
+<question subject="Operating System">
+<text>Kernel is?</text>
+<option1>Core part</option1>
+<option2>UI</option2>
+<option3>App</option3>
+<option4>File</option4>
+<answer>Core part</answer>
+</question>
+
+<question subject="Operating System">
+<text>Paging avoids?</text>
+<option1>Fragmentation</option1>
+<option2>Crash</option2>
+<option3>Error</option3>
+<option4>Delay</option4>
+<answer>Fragmentation</answer>
+</question>
+
+<!-- ================= CN ================= -->
+<question subject="Computer Networks">
+<text>What is LAN?</text>
+<option1>Local Area Network</option1>
+<option2>Wide Network</option2>
+<option3>Internet</option3>
+<option4>Protocol</option4>
+<answer>Local Area Network</answer>
+</question>
+
+<question subject="Computer Networks">
+<text>IP stands for?</text>
+<option1>Internet Protocol</option1>
+<option2>Internal Process</option2>
+<option3>Input Port</option3>
+<option4>None</option4>
+<answer>Internet Protocol</answer>
+</question>
+
+<question subject="Computer Networks">
+<text>Which device routes data?</text>
+<option1>Switch</option1>
+<option2>Router</option2>
+<option3>Hub</option3>
+<option4>Bridge</option4>
+<answer>Router</answer>
+</question>
+
+<question subject="Computer Networks">
+<text>HTTP is?</text>
+<option1>Protocol</option1>
+<option2>Language</option2>
+<option3>OS</option3>
+<option4>Hardware</option4>
+<answer>Protocol</answer>
+</question>
+
+<question subject="Computer Networks">
+<text>OSI has how many layers?</text>
+<option1>5</option1>
+<option2>7</option2>
+<option3>3</option3>
+<option4>4</option4>
+<answer>7</answer>
+</question>
+
+<question subject="Computer Networks">
+<text>MAC address is?</text>
+<option1>Logical</option1>
+<option2>Physical</option2>
+<option3>Virtual</option3>
+<option4>Temporary</option4>
+<answer>Physical</answer>
+</question>
+
+<question subject="Computer Networks">
+<text>DNS is used for?</text>
+<option1>IP to name</option1>
+<option2>Name to IP</option2>
+<option3>Routing</option3>
+<option4>Security</option4>
+<answer>Name to IP</answer>
+</question>
+
+<question subject="Computer Networks">
+<text>Which is wireless?</text>
+<option1>LAN</option1>
+<option2>WAN</option2>
+<option3>WLAN</option3>
+<option4>MAN</option4>
+<answer>WLAN</answer>
+</question>
+
+<question subject="Computer Networks">
+<text>FTP is used for?</text>
+<option1>Mail</option1>
+<option2>File transfer</option2>
+<option3>Security</option3>
+<option4>Routing</option4>
+<answer>File transfer</answer>
+</question>
+
+<question subject="Computer Networks">
+<text>Ping checks?</text>
+<option1>Speed</option1>
+<option2>Connectivity</option2>
+<option3>Memory</option3>
+<option4>CPU</option4>
+<answer>Connectivity</answer>
+</question>
+
+<!-- ================= DS ================= -->
+<question subject="Data Structures">
+<text>Stack follows?</text>
+<option1>FIFO</option1>
+<option2>LIFO</option2>
+<option3>Random</option3>
+<option4>None</option4>
+<answer>LIFO</answer>
+</question>
+
+<question subject="Data Structures">
+<text>Queue follows?</text>
+<option1>LIFO</option1>
+<option2>FIFO</option2>
+<option3>Random</option3>
+<option4>None</option4>
+<answer>FIFO</answer>
+</question>
+
+<question subject="Data Structures">
+<text>Binary tree max children?</text>
+<option1>1</option1>
+<option2>2</option2>
+<option3>3</option3>
+<option4>4</option4>
+<answer>2</answer>
+</question>
+
+<question subject="Data Structures">
+<text>Linked list stores?</text>
+<option1>Array</option1>
+<option2>Nodes</option2>
+<option3>Tree</option3>
+<option4>Stack</option4>
+<answer>Nodes</answer>
+</question>
+
+<question subject="Data Structures">
+<text>Which is linear?</text>
+<option1>Tree</option1>
+<option2>Graph</option2>
+<option3>Array</option3>
+<option4>Heap</option4>
+<answer>Array</answer>
+</question>
+
+<question subject="Data Structures">
+<text>Push is used in?</text>
+<option1>Queue</option1>
+<option2>Stack</option2>
+<option3>Tree</option3>
+<option4>Graph</option4>
+<answer>Stack</answer>
+</question>
+
+<question subject="Data Structures">
+<text>Pop removes?</text>
+<option1>First</option1>
+<option2>Last</option2>
+<option3>Middle</option3>
+<option4>None</option4>
+<answer>Last</answer>
+</question>
+
+<question subject="Data Structures">
+<text>Tree root is?</text>
+<option1>Top node</option1>
+<option2>Leaf</option2>
+<option3>Child</option3>
+<option4>Edge</option4>
+<answer>Top node</answer>
+</question>
+
+<question subject="Data Structures">
+<text>Graph contains?</text>
+<option1>Nodes</option1>
+<option2>Edges</option2>
+<option3>Both</option3>
+<option4>None</option4>
+<answer>Both</answer>
+</question>
+
+<question subject="Data Structures">
+<text>Heap is?</text>
+<option1>Tree</option1>
+<option2>Array</option2>
+<option3>Graph</option3>
+<option4>Stack</option4>
+<answer>Tree</answer>
+</question>
+
+<!-- ================= SE ================= -->
+<question subject="Software Engineering">
+<text>SDLC stands for?</text>
+<option1>Software Development Life Cycle</option1>
+<option2>System Design</option2>
+<option3>Code</option3>
+<option4>Testing</option4>
+<answer>Software Development Life Cycle</answer>
+</question>
+
+<question subject="Software Engineering">
+<text>Waterfall model is?</text>
+<option1>Sequential</option1>
+<option2>Random</option2>
+<option3>Parallel</option3>
+<option4>None</option4>
+<answer>Sequential</answer>
+</question>
+
+<question subject="Software Engineering">
+<text>Agile is?</text>
+<option1>Flexible</option1>
+<option2>Rigid</option2>
+<option3>Static</option3>
+<option4>Slow</option4>
+<answer>Flexible</answer>
+</question>
+
+<question subject="Software Engineering">
+<text>Testing ensures?</text>
+<option1>Quality</option1>
+<option2>Speed</option2>
+<option3>Size</option3>
+<option4>Color</option4>
+<answer>Quality</answer>
+</question>
+
+<question subject="Software Engineering">
+<text>Requirement phase is?</text>
+<option1>First</option1>
+<option2>Last</option2>
+<option3>Middle</option3>
+<option4>None</option4>
+<answer>First</answer>
+</question>
+
+<question subject="Software Engineering">
+<text>Bug means?</text>
+<option1>Error</option1>
+<option2>Feature</option2>
+<option3>Code</option3>
+<option4>Test</option4>
+<answer>Error</answer>
+</question>
+
+<question subject="Software Engineering">
+<text>UML is?</text>
+<option1>Modeling language</option1>
+<option2>Programming</option2>
+<option3>OS</option3>
+<option4>Database</option4>
+<answer>Modeling language</answer>
+</question>
+
+<question subject="Software Engineering">
+<text>Maintenance phase is?</text>
+<option1>After delivery</option1>
+<option2>Before coding</option2>
+<option3>Testing</option3>
+<option4>Design</option4>
+<answer>After delivery</answer>
+</question>
+
+<question subject="Software Engineering">
+<text>Prototype is?</text>
+<option1>Sample</option1>
+<option2>Final</option2>
+<option3>Error</option3>
+<option4>Code</option4>
+<answer>Sample</answer>
+</question>
+
+<question subject="Software Engineering">
+<text>Version control is used for?</text>
+<option1>Tracking code</option1>
+<option2>Deleting</option2>
+<option3>Testing</option3>
+<option4>Design</option4>
+<answer>Tracking code</answer>
+</question>
+
+</quiz>
